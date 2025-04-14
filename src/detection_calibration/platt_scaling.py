@@ -359,6 +359,6 @@ class TemperatureScaling(nn.Module):
         temp = self.temperature.expand(logits.size())
         logits /= torch.abs(temp)
 
-        return torch.sigmoid(logits).detach().numpy()
+        return torch.sigmoid(logits).detach()
 
 # Thanks to https://github.com/gpleiss/temperature_scaling/
